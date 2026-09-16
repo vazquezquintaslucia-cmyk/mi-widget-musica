@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi música cottagecore</title>
+<style>
+  :root {
+    --cream: #f5efe3;
+    --sage: #a7ad88;
+    --sage-dark: #8e986e;
+    --text: #5c6248;
+    --muted: #8b8d76;
+    --border: #d8cdb6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: var(--cream);
+    font-family: Georgia, serif;
+    color: var(--text);
+  }
+
+  .player {
+    width: min(100%, 360px);
+    padding: 28px 20px;
+    text-align: center;
+    background: var(--cream);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(92, 98, 72, .10);
+  }
+
+  .flowers {
+    font-size: 34px;
+    letter-spacing: 8px;
+  }
+
+  h1 {
+    margin: 14px 0 6px;
+    font-size: 23px;
+    font-weight: normal;
+  }
+
+  p {
+    margin: 8px 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .play {
+    width: 64px;
+    height: 64px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sage);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .play:hover,
+  .play:focus-visible {
+    background: var(--sage-dark);
+  }
+
+  .link {
+    display: block;
+    margin-top: 20px;
+    color: #777c5d;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <main class="player">
+    <div class="flowers" aria-hidden="true">🌷 🌿 🌼</div>
+    <h1>My little music garden</h1>
+    <p>♡ música que me gusta ♡</p>
+
+    <button class="play" type="button" aria-label="Abrir mi playlist"
+      onclick="window.open('https://music.youtube.com/playlist?list=ML', '_blank', 'noopener,noreferrer')">
+      ▶
+    </button>
+
+    <a class="link"
+       href="https://music.youtube.com/playlist?list=ML"
+       target="_blank"
+       rel="noopener noreferrer">
+      Abrir mi playlist ♫
+    </a>
+  </main>
+</body>
+</html>
